@@ -20,7 +20,7 @@ module Pelusa
       #
       # Returns A boolean representing if Rubinius is being used. 
       def rubinius?
-        !defined?(Rubinius).nil?
+        RUBY_ENGINE == "rbx" && !defined?(Rubinius).nil?
       end
 
       # Internal - Indiciates whether or not Melbourne parser is separately available.
